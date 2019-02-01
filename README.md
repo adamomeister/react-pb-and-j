@@ -1,7 +1,8 @@
 ## Running Locally
-`git clone https://github.com/adamomeister/react-pb-and-j.git
+```
 npm install
-npm start`
+npm start
+```
 In your browser, go to the localhost address (http://localhost:3000/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
