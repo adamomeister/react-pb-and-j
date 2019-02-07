@@ -5,7 +5,9 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
+      <footer class="bg-light">
       <h1>Footer.</h1>
+      </footer>
     );
   }
 }

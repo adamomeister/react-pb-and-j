@@ -10,8 +10,10 @@ class App extends Component {
       <div className="App">
       <header className="App-header">
         <NavBar />
-        <h1>Hello, React!</h1>
       </header>
+      <div class="container">
+        <h1>Hello, React!</h1>
+      </div>
       <Footer />
       </div>
     );
