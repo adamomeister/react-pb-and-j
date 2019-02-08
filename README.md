@@ -1,3 +1,10 @@
+## Running Locally
+```
+npm install
+npm start
+```
+In your browser, go to the localhost address (http://localhost:3030/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
