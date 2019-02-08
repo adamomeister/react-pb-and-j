@@ -11,7 +11,7 @@ class App extends Component {
       <header className="App-header">
         <NavBar />
       </header>
-      <div class="container">
+      <div className="container">
         <h1>Hello, React!</h1>
       </div>
       <Footer />
