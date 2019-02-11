@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
 class SignUp extends React.Component {
-  // constructor(props) {
-  //    super(props);
-  //    this.submit = this.submit.bind(this);
-  //  }
+  constructor(props) {
+     super(props);
+     this.submit = this.submit.bind(this);
+   }
 
   state = {
       name: "",
@@ -25,10 +25,10 @@ class SignUp extends React.Component {
     this.setState({ password: event.target.value });
   };
   newPasswordConfirm = event => {
-    this.setState({ password_confirmation: event.target.value });
+    this.setState({ passwordConfirmation: event.target.value });
   };
 
-  submit = event => {
+  submit(event) {
     event.preventDefault();
 
     const params = {
@@ -37,25 +37,26 @@ class SignUp extends React.Component {
       password: this.state.password,
       password_confirmation: this.state.passwordConfirmation
     };
+    console.log(params);
 
     axios
-      .post(`http://localhost:3000/api/users`, {params})
+      .post(`http://localhost:3000/api/users`, params)
       .then(response => {
         console.log(response);
         console.log(response.data);
-        console.log("sucess signup")
+        console.log("success signup")
       })
       .catch(error => {
         console.log("failed signup");
       });
-    }
+  }
 
   render() {
     return (
       <div className="container">
-        <form>
+        <form onSubmit={this.submit}>
           <h1>Signup</h1>
-          <div className="form-group" onSubmit={this.submit}>
+          <div className="form-group">
             <label>Name:</label>
             <input type="text" className="form-control" onChange={this.newName}/>
           </div>
