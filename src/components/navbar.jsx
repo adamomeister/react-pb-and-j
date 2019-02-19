@@ -30,7 +30,7 @@ const NavBar = () => (
               <Link className="nav-link" to="/login">Login</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quickbookconnect">Connect To Quickbooks
+              <Link className="nav-link" to="/quickbooksconnect">Connect To Quickbooks
               </Link>
             </li>
           </ul>
