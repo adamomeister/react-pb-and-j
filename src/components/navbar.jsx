@@ -3,7 +3,9 @@ import About from "./about";
 import ProductFeatures from "./product-features";
 import SignUp from "./signup";
 import Login from "./login";
+import QuickbooksConnect from "./quickbooksconnect";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 const NavBar = () => (
   <Router>
@@ -27,6 +29,10 @@ const NavBar = () => (
             <li className="nav-item">
               <Link className="nav-link" to="/login">Login</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/quickbookconnect">Connect To Quickbooks
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -34,6 +40,7 @@ const NavBar = () => (
       <Route path="/features" component={ProductFeatures} />
       <Route path="/signup" component={SignUp} />
       <Route path="/login" component={Login} />
+      <Route path="/quickbooksconnect" component={QuickbooksConnect} />
     </div>
   </Router>
 
